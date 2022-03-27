@@ -1,0 +1,17 @@
+ion-item-divider {
+  min-height: 0.25px;
+  padding: 0px;
+  margin-top: 10px;
+  background: var(--ion-color-medium) !important;
+}
+
+ion-icon {
+  margin: 5px;
+}
+
+.left-icon {
+  transform: scaleX(-1);
+  -moz-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  -ms-transform: scaleX(-1);
+}

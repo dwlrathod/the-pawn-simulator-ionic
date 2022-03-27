@@ -1,8 +1,8 @@
 {
   "name": "the-pawn-simulator",
   "version": "0.0.1",
-  "author": "Ionic Framework",
-  "homepage": "https://ionicframework.com/",
+  "author": "Dhawal Rathod",
+  "homepage": "https://github.com/dwlrathod/the-pawn-simulator-ionic",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -62,5 +62,5 @@
     "ts-node": "~8.3.0",
     "typescript": "~4.4.4"
   },
-  "description": "An Ionic project"
+  "description": "Basic pawn simulator"
 }

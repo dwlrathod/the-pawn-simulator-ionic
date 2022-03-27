@@ -1,0 +1,18 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="end">
+      <ion-button class="icon-only" [routerLink]="['/about']">
+        <ion-icon color="medium" size="large" name="information-circle-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>
+      The Pawn Simulator
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <app-board></app-board>
+  <app-command-palette></app-command-palette>
+  <app-logs></app-logs>
+</ion-content>

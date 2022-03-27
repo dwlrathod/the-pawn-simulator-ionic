@@ -1,0 +1,13 @@
+<ion-grid class="ion-no-padding ion-margin">
+  <ion-row *ngFor="let r of rows;">
+    <ion-col class="ion-no-padding" *ngFor="let c of cols;">
+      <ion-button class="icon-only ion-no-margin ion-no-padding" [color]="(c + r) % 2 === 1 ? 'tertiary' : 'warning'"
+        [style.height.px]="cellSize" color="transparent">
+        <ion-icon *ngIf="2 === c && 2 === r" color="secondary" name="footsteps">
+        </ion-icon>
+        <ion-icon *ngIf="1 === c && 5 === r" color="light" name="footsteps">
+        </ion-icon>
+      </ion-button>
+    </ion-col>
+  </ion-row>
+</ion-grid>
