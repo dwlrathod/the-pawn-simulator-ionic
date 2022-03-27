@@ -1,0 +1,7 @@
+{
+  "name": "the-pawn-simulator",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
