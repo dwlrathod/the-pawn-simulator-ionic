@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ExecutionStatus } from 'src/app/models/enums';
+import { Message } from 'src/app/models/models';
+import { PawnService } from 'src/app/services/pawn.service';
 
 @Component({
   selector: 'app-logs',
@@ -7,8 +10,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LogsComponent implements OnInit {
 
-  constructor() { }
+  logs: Message[] = [];
+  public executionStatus: typeof ExecutionStatus = ExecutionStatus;
 
-  ngOnInit() { }
+  constructor(private pawnService: PawnService) { }
+
+  ngOnInit() {
+    this.pawnService.observePawn().subscribe(position => {
+      if (position?.log) { this.logs.push(position?.log); }
+    });
+  }
+
+  clearLogs() {
+    this.logs = [];
+  }
 
 }

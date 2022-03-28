@@ -1,12 +1,23 @@
+<ion-item class="ion-text-center" *ngIf="pawnPlaceMode">
+  <ion-label class="ion-text-wrap instructions">
+    Select your Pawn location on chess board.
+  </ion-label>
+</ion-item>
+
 <ion-grid class="ion-no-padding ion-margin">
   <ion-row *ngFor="let r of rows;">
     <ion-col class="ion-no-padding" *ngFor="let c of cols;">
       <ion-button class="icon-only ion-no-margin ion-no-padding" [color]="(c + r) % 2 === 1 ? 'tertiary' : 'warning'"
-        [style.height.px]="cellSize" color="transparent">
-        <ion-icon *ngIf="2 === c && 2 === r" color="secondary" name="footsteps">
-        </ion-icon>
-        <ion-icon *ngIf="1 === c && 5 === r" color="light" name="footsteps">
-        </ion-icon>
+        [style.height.px]="cellSize" color="transparent" (click)="onCellClick(c,r)">
+        <ng-container
+          *ngIf="pawnPosition && pawnPosition.rowPos !== -1 && pawnPosition.colPos !== -1  && !pawnPlaceMode">
+          <ion-icon
+            *ngIf="pawnPosition && pawnPosition.pawnColor === pawnColor.black && pawnPosition.colPos === c && pawnPosition.rowPos === r"
+            [ngClass]="pawnPosition.pawnFace" color="secondary" name="footsteps"></ion-icon>
+          <ion-icon
+            *ngIf="pawnPosition && pawnPosition.pawnColor === pawnColor.white && pawnPosition.colPos === c && pawnPosition.rowPos === r"
+            [ngClass]="pawnPosition.pawnFace" color="light" name="footsteps"></ion-icon>
+        </ng-container>
       </ion-button>
     </ion-col>
   </ion-row>

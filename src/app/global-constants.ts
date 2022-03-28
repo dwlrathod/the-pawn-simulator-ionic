@@ -2,6 +2,21 @@
 export const GLOBAL_CONSTANTS = {
     rowLength: 8,
     columnLength: 8,
+    moveIcons: ['play-outline', 'play-forward-outline'],
+    faceIcons: { south: 'arrow-back', west: 'arrow-up', north: 'arrow-forward', east: 'arrow-down' },
+    faceArray: ['South', 'West', 'North', 'East'],
+    colorIcons: { icon: 'radio-button-on-outline', black: 'black-pawn', white: 'white-pawn' },
+    error: {
+        invalidPlace: 'First place the pawn.',
+        invalidMove: 'Invalid move. Pawn will fall of board.',
+    },
+    success: {
+        validPlace: 'The place command executed successfully.',
+        validMove: 'The move command executed successfully.',
+        validLeft: 'The left command executed successfully.',
+        validRight: 'The right command executed successfully.',
+        validReport: 'The report command executed successfully.',
+    },
     aboutCommands: [
         {
             heading: 'PLACE X,Y,F,C',

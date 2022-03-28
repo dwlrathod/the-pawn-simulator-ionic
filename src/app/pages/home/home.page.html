@@ -12,7 +12,9 @@
 </ion-header>
 
 <ion-content>
-  <app-board></app-board>
-  <app-command-palette></app-command-palette>
-  <app-logs></app-logs>
+  <ng-container>
+    <app-board id="appBoard"></app-board>
+    <app-command-palette id="appCommandPalette" [hidden]="(pawnPlaceMode$ | async) === true"></app-command-palette>
+    <app-logs id="appLogs" [hidden]="(pawnPlaceMode$ | async) === true">></app-logs>
+  </ng-container>
 </ion-content>

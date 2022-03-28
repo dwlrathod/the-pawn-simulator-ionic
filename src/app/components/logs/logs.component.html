@@ -1,5 +1,14 @@
 <ion-list class="ion-no-margin ion-no-padding">
   <ion-item lines="none">
-    <ion-label class="heading">Logs</ion-label>
+    <ion-label class="heading" slot="start">Logs</ion-label>
+    <ion-icon name="trash" color="medium" slot="end" (click)="clearLogs()"></ion-icon>
+  </ion-item>
+  <ion-item *ngFor="let log of logs.reverse()">
+    <ion-icon *ngIf="log.type === executionStatus.error" slot="start" color="danger" name="warning"></ion-icon>
+    <ion-icon *ngIf="log.type === executionStatus.success" slot="start" color="success" name="thumbs-up"></ion-icon>
+    <ion-label class="ion-text-wrap">
+      <h2>{{log.command}}</h2>
+      <ion-note>{{log.message}}</ion-note>
+    </ion-label>
   </ion-item>
 </ion-list>

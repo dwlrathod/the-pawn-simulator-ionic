@@ -5,3 +5,23 @@ ion-button {
 ion-icon {
   font-size: 8vw;
 }
+
+.South {
+  transform: rotate(270deg) !important;
+}
+
+.West {
+  transform: rotate(0deg) !important;
+}
+
+.North {
+  transform: rotate(90deg) !important;
+}
+
+.East {
+  transform: rotate(180deg) !important;
+}
+
+.instructions {
+  font-size: 30px;
+}

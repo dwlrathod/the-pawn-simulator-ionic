@@ -3,24 +3,24 @@
     <ion-label class="heading ion-text-wrap">Command Palette</ion-label>
   </ion-item>
   <div style="margin: 15px;">
-    <ion-button shape="round" color="warning" expand="block">Place</ion-button>
+    <ion-button shape="round" color="warning" expand="block" (click)="onPlace()">Place</ion-button>
     <ion-grid class="ion-no-padding">
       <ion-row>
         <ion-col>
-          <ion-button shape="round" color="warning" expand="block">
+          <ion-button shape="round" color="warning" expand="block" (click)="onLeft()">
             <ion-icon class="left-icon" name="reload-sharp"></ion-icon>Left
           </ion-button>
         </ion-col>
         <ion-col>
-          <ion-button shape="round" color="warning" expand="block">Move</ion-button>
+          <ion-button shape="round" color="warning" expand="block" (click)="onMove()">Move</ion-button>
         </ion-col>
         <ion-col>
-          <ion-button shape="round" color="warning" expand="block">
+          <ion-button shape="round" color="warning" expand="block" (click)="onRight()">
             Right<ion-icon name="reload-sharp"></ion-icon>
           </ion-button>
         </ion-col>
       </ion-row>
     </ion-grid>
-    <ion-button shape="round" color="warning" expand="block">Report</ion-button>
+    <ion-button shape="round" color="warning" expand="block" (click)="onReport()">Report</ion-button>
   </div>
 </ion-list>

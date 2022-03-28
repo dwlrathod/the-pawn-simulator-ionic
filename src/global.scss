@@ -38,3 +38,23 @@ ion-item {
 ion-list {
   background: var(--ion-background-color) !important;
 }
+
+.black-pawn .action-sheet-group {
+  color: black;
+}
+
+.white-pawn .action-sheet-group {
+  color: white;
+}
+
+.black-pawn {
+  ion-icon {
+    color: black !important;
+  }
+}
+
+.white-pawn {
+  ion-icon {
+    color: white !important;
+  }
+}
