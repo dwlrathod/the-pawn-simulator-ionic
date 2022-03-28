@@ -1,0 +1,6 @@
+{
+	"appId": "com.dwlrathod.pawn.simulator",
+	"appName": "Pawn Simulator",
+	"webDir": "www",
+	"bundledWebRuntime": false
+}
